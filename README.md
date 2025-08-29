@@ -144,21 +144,21 @@ All steps are encapsulated in utility functions inside `utils/` for reuse across
 ## Methods
 
 ### 1) CAPM Beta Estimation
-- **Returns**: \( r_i = \frac{P_t - P_{t-1}}{P_{t-1}} \) (or log returns)  
-- **Regression**: Fit \( r_i = \alpha + \beta r_m + \varepsilon \) where \( r_m \) is market returns.  
-- **Interpretation**: \(\beta > 1\) = more volatile than market; \(\beta < 1\) = less volatile.
+- **Returns**: $r_i = \frac{P_t - P_{t-1}}{P_{t-1}}$ (or log returns)  
+- **Regression**: $r_i = \alpha + \beta r_m + \varepsilon$ where $r_m$ is market returns.  
+- **Interpretation**: $\beta > 1$ = more volatile than market; $\beta < 1$ = less volatile.
 
 ### 2) CAPM Expected Return
-- **Formula**: \( \mathbb{E}[r_i] = r_f + \beta_i (\mathbb{E}[r_m] - r_f) \)  
-- **Alpha**: \( \alpha = r_i - (r_f + \beta (r_m - r_f)) \) on realized samples.
+- **Formula**: $\mathbb{E}[r_i] = r_f + \beta_i (\mathbb{E}[r_m] - r_f)$  
+- **Alpha**: $\alpha = r_i - (r_f + \beta (r_m - r_f))$ on realized samples.
 
 ### 3) Rolling Beta
-- **Windowed** OLS over a sliding window (e.g., 60/90/120 trading days) to diagnose **Beta stability** across regimes.
+- **Windowed** OLS over a sliding window (e.g., 60/90/120 trading days) to assess **Beta stability** across regimes.
 
 ### 4) Forecasting (Stock Prediction)
 - **Preprocessing**: train/test split by time, scaling if needed, lag features/rolling statistics.  
 - **Models**: Baselines via `utils/model_train.py` (e.g., Linear Regression, Random Forest; can be extended to ARIMA/LSTM).  
-- **Evaluation**: RMSE, MAE, and \(R^2\); plot **Actual vs Predicted**.
+- **Evaluation**: RMSE, MAE, and $\(R^2\)$; plot **Actual vs Predicted**.
 
 ---
 
