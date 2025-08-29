@@ -158,7 +158,7 @@ All steps are encapsulated in utility functions inside `utils/` for reuse across
 ### 4) Forecasting (Stock Prediction)
 - **Preprocessing**: train/test split by time, scaling if needed, lag features/rolling statistics.  
 - **Models**: Baselines via `utils/model_train.py` (e.g., Linear Regression, Random Forest; can be extended to ARIMA/LSTM).  
-- **Evaluation**: RMSE, MAE, and $\R^2\$; plot **Actual vs Predicted**.
+- **Evaluation**: RMSE, MAE, and $R^2$; plot **Actual vs Predicted**.
 
 ---
 
@@ -261,8 +261,8 @@ Trading-Guide-App/
 - **CAPM Results Table**: **Beta, Alpha, Expected Return**
 
 ### 4) Stock Analysis Page
-**Inputs**: Stock ticker, start date, end date.
-**Outputs**:
+**Inputs**: Stock ticker, start date, end date.  
+**Outputs**:  
 - Price charts (line/candlestick)
 - Moving averages (SMA/EMA), daily returns, and volatility overlays
 
